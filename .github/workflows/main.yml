@@ -16,8 +16,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Execute PowerShell Script
+      shell: pwsh
       run: |
-        ./Update-genstartFeed.ps1 -FeedUrl "https://drpodcast.nu/genstart/feed.xml" -OutputFilename "genstart-feed.xml.xml"
+        ./Update-genstartFeed.ps1 -FeedUrl "https://drpodcast.nu/genstart/feed.xml" -OutputFilename "genstart-feed.xml.xml" 
 
     - name: Commit and Push Changes
       run: |
